@@ -1,3 +1,4 @@
+FROM ubuntu
 MAINTAINER Ittipan Langkulanon <toh2526@msn.com>
 
 ENV LANG en_US.UTF-8
