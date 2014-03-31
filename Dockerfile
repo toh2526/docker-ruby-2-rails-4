@@ -8,5 +8,7 @@ ENV LC_ALL en_US.UTF-8
 RUN apt-get update && apt-get install -y build-essential libssl-dev libreadline-dev wget && apt-get clean
 
 # Download source and Install ruby
-ADD install-ruby.sh ~/
-RUN ~/install-ruby.sh
+ADD install-ruby.sh /root/
+RUN chmod 700 /root/install-ruby.sh
+RUN /root/install-ruby.sh
+RUN rm /root/install-ruby.sh

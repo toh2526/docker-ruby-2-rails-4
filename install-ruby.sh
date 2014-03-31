@@ -1,6 +1,10 @@
-#!/bin/bash
+#!/bin/sh
 
-LATEST_RUBY_VER=$(curl -s "http://cache.ruby-lang.org/pub/ruby/stable/" | sed -E 's/^.*"(ruby-)(2.1.[0-9]+)(.*)".*$/\2/' | sed -e '/^2.1.*/!d' | sort | sed '$!d')
+#LATEST_RUBY_VER=$(curl -s "http://cache.ruby-lang.org/pub/ruby/stable/" | sed -E 's/^.*"(ruby-)(2.1.[0-9]+)(.*)".*$/\2/' | sed -e '/^2.1.*/!d' | sort | sed '$!d')
+
+# We are using fixed version number because above method does not work on script called by Dockerfile.
+LATEST_RUBY_VER=2.1.1
+
 wget http://cache.ruby-lang.org/pub/ruby/stable/ruby-$LATEST_RUBY_VER.tar.gz
 tar -xzf ruby-$LATEST_RUBY_VER.tar.gz
 rm ruby-$LATEST_RUBY_VER.tar.gz
