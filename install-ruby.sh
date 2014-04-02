@@ -6,7 +6,6 @@
 LATEST_RUBY_VER=2.1.1
 
 sudo apt-get install libxslt-dev libxml2-dev
-sudo apt-get install git
 wget http://cache.ruby-lang.org/pub/ruby/stable/ruby-$LATEST_RUBY_VER.tar.gz
 tar -xzf ruby-$LATEST_RUBY_VER.tar.gz
 rm ruby-$LATEST_RUBY_VER.tar.gz
@@ -22,3 +21,4 @@ echo 'gem: --no-document' > ~/.gemrc
 gem install bundler
 gem install rails
 gem install nokogiri
+sudo apt-get install git
