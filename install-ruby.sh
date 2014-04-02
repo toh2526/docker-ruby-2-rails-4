@@ -21,4 +21,4 @@ echo 'gem: --no-document' > ~/.gemrc
 gem install bundler
 gem install rails
 gem install nokogiri
-sudo apt-get install git
+sudo -y apt-get install git
